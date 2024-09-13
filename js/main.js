@@ -128,40 +128,11 @@
 
 //  Validation Script 
 
-function validateRegistrationForm() {
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-
-    // Basic validation
-    if (username.length < 3) {
-        alert('Username must be at least 3 characters long.');
-        return false;
-    }
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email.match(emailPattern)) {
-        alert('Please enter a valid email.');
-        return false;
-    }
-    if (password.length < 6) {
-        alert('Password must be at least 6 characters long.');
-        return false;
-    }
-    if (password !== confirmPassword) {
-        alert('Passwords do not match.');
-        return false;
-    }
-    return true;
-}
-
-
-
-$('.tab a').on('click', function(e) {
+$('.tab a').on('click', function (e) {
 
     e.preventDefault();
 
-$(this).parent().addClass('active');
+    $(this).parent().addClass('active');
     $(this).parent().siblings().removeClass('active');
 
     target = $(this).attr('href');
@@ -170,5 +141,21 @@ $(this).parent().addClass('active');
 
     $(target).fadeIn(600);
 
-  });
+});
 
+// Login Btn
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.getElementById('loginForm').addEventListener('submit', function (event) {
+//         event.preventDefault(); // Prevent the form from submitting normally
+
+//         // Capture input values
+//         var username = document.getElementById('username').value;
+//         var password = document.getElementById('password').value;
+
+//         // Optionally: Perform validation or send data to the server
+
+//         // Redirect to index.html
+//         window.location.href = 'index.html';
+//     });
+// }); 
