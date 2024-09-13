@@ -145,17 +145,17 @@ $('.tab a').on('click', function (e) {
 
 // Login Btn
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     document.getElementById('loginForm').addEventListener('submit', function (event) {
-//         event.preventDefault(); // Prevent the form from submitting normally
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('login').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
 
-//         // Capture input values
-//         var username = document.getElementById('username').value;
-//         var password = document.getElementById('password').value;
+        // Capture input values
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
 
-//         // Optionally: Perform validation or send data to the server
+        // Optionally: Perform validation or send data to the server
 
-//         // Redirect to index.html
-//         window.location.href = 'index.html';
-//     });
-// }); 
+        // Redirect to index.html
+        window.location.href = 'index.html';
+    });
+}); 
